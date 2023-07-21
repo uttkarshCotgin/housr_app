@@ -2,6 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/snackbar/snackbar.dart';
 import 'package:housr_app/Theme/theme_data.dart';
 import 'package:housr_app/business_logic/cubits/counter/booking_state.dart';
 import 'package:housr_app/ui/widgets/CTA/cta_button_carousel.dart';
@@ -438,6 +441,24 @@ class _RoomCardExpandedState extends State<RoomCardExpanded> {
         listener: (context, state) async {
           if( state is BookingPost){
             BlocProvider.of<NavigationBarCubit>(context).selectItem(NavigationBarItem.booking);
+            Get.showSnackbar(GetSnackBar(
+              borderRadius: 10,
+              snackStyle: SnackStyle.FLOATING,
+              snackPosition: SnackPosition.TOP,
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              leftBarIndicatorColor: AppColor.snackBarGreen,
+              backgroundColor: Colors.white,
+              titleText: Text(
+                "Booking Confirmed",
+                style: myTheme.textTheme.bodyLarge,
+              ),
+              messageText: Text(
+                "Check bookings in bookings Tab",
+                style: myTheme.textTheme.bodySmall?.copyWith(color: AppColor.subHeading),
+              ),
+              icon: const Icon(Icons.check, color: AppColor.snackBarGreen),
+              duration: const Duration(seconds: 3),
+            ));
             Navigator.of(context)
                 .pushNamedAndRemoveUntil("/homepage",arguments: {"hotelData": await loadListFromSharedPreferences()}, (Route<dynamic> route) => false);
 

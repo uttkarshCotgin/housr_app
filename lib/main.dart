@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
             create: (context) => BookingCubit(),
           ),
         ],
-        child: MaterialApp(
+        child: GetMaterialApp(
        theme: myTheme,
     debugShowCheckedModeBanner: false,
     title: 'Flutter Demo',
