@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "5081472319",
+    "project_id": "housr-66a18",
+    "storage_bucket": "housr-66a18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5081472319:android:cb528bc6232fb5f899878a",
+        "android_client_info": {
+          "package_name": "com.example.housr_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5081472319-t355fj2hk01eu713uobdr69ellkbgqo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArXM6vJS8S8qduXL64MLTnfgalt6Ja20g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5081472319-t355fj2hk01eu713uobdr69ellkbgqo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
